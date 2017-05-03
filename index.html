@@ -1,111 +1,110 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 
-  <meta name="description" content="Portfolio project for Zack Glaser" />
-  <meta name="author" content="//zackglaser.com">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta charset="utf-8">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta id="theme-color" name="theme-color" content="#307699">
+    <meta name="description" content="Portfolio project for Zack Glaser"/>
+    <meta name="author" content="//zackglaser.com">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#36f">
+    <!--opens links in new window-->
+    <base target="_blank">
 
-  <base target="_blank">
+    <title>Zack Glaser</title>
 
-  <title>Zack Glaser</title>
+    <!--add bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--specialized css has to load after bootstrap's more general css-->
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- add bootstrap css-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!--specialized css has to load after bootstrap's more general css-->
-  <link rel="stylesheet" href="css/style.css" />
-
-</head>
-<body>
-  <div class="container">
-    <header class="row head">
-      <section class="col-xs-6 p-0 title">
-        <p class="globe">&#127760</p>
-      </section>
-      <section class="col-xs-6 text-right title">
-        <h1>Zack Glaser</h1>
-        <p>Lawyer | Coder</p>
-        <ul class="text-right">
-          <a href="https://github.com/thirdth"><li class="fontawesome-github-sign" data-text="github-sign"></li></a>
-          <a href="https://www.facebook.com/zack.glaser.7"><li class="fontawesome-facebook-sign" data-text="facebook-sign"></li></a>
-          <a href="https://www.linkedin.com/in/zack-glaser-86522525/"><li class="fontawesome-linkedin-sign" data-text="linkedin-sign"></li></a>
-        </ul>
-      </section>
-    </header>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+  </head>
+  <body>
+    <div class="container">
+      <header class="row head">
+        <section class="col-xs-6 p-0">
+          <h1 class="globe">&#127760;</h1>
+        </section>
+        <section class="col-xs-6 text-right">
+          <h1>Zack Glaser</h1>
+          <p>Lawyer | Coder</p>
+          <div class="social text-right">
+            <a href="https://github.com/thirdth" class="fontawesome-github-sign" data-text="github-sign"> ⬩</a>
+            <a href="https://www.facebook.com/zack.glaser.7" class="fontawesome-facebook-sign" data-text="facebook-sign"> ⬩</a>
+            <a href="https://www.linkedin.com/in/zack-glaser-86522525/" class="fontawesome-linkedin-sign" data-text="linkedin-sign"></a>
+          </div>
+        </section>
+      </header>
+      <!--collapsable navbar-->
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li> <!--TODO: add href for other pages when present-->
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li> <!--TODO add href for other pages when present -->
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+      </nav>
+      <!--End reusable header TODO: place header in separate file for reuse-->
+      <section class="row hero">
+        <picture>
+          <source srcset="img/guesthouse_600x225.jpg" media="(max-width:600px)">
+          <source srcset="img/guesthouse_1200x450.jpg" media="(min-width: 600px)">
+          <img class="jumbo" src="img/guesthouse_1200x450.jpg" alt="landscape image of cottage">
+        </picture>
+        <h2>Featured Work</h2>
+      </section>
+      <div class="row projects">
+        <section class="col-md-4">
+          <picture>
+            <source srcset="img/project1_1x.jpg" media="(max-width: 600px)">
+            <source srcset="img/project1_2x.jpg" media="(min-width: 950px)">
+            <img class="image" src="img/project1_2x.jpg" alt="photo of modern statue">
+          </picture>
+          <h3>Project 1</h3>
+          <p><a href="#">https://github.com/thirdth/Project1/</a></p> <!--TODO: add project1 github html-->
+        </section>
+        <section class="col-md-4">
+          <picture>
+            <source srcset="img/project2_1x.jpg" media="(max-width: 600px)">
+            <source srcset="img/project2_2x.jpg" media="(min-width: 950px)">
+            <img class="image" src="img/project2_2x.jpg" alt="photo of man with llama">
+          </picture>
+          <h3>Project 2</h3>
+          <p><a href="#">https://github.com/thirdth/Project2/</a></p> <!--TODO: add project2 github html-->
+        </section>
+        <section class="col-md-4">
+          <picture>
+            <source srcset="img/project3_1x.jpg" media="(max-width: 600px)">
+            <source srcset="img/project3_3x.jpg" media="(min-width: 767px)">
+            <img class="image" src="img/project3_2x.jpg" alt="photo of people in a plaza">
+          </picture>
+          <h3>Project 3</h3>
+          <p><a href="#">https://github.com/thirdth/Project3/</a></p> <!--TODO: add project3 github html-->
+        </section>
       </div>
-    </nav>
-    <!--End Header -->
-    <section class="row hero">
-      <picture>
-        <source srcset="img/guesthouse_600x225.jpg" media="(min-width:600)">
-        <source srcset="img/guesthouse_1200x450.jpg" media="(min-width: 950px)">
-        <img class="jumbo" src="img/guesthouse_1200x450.jpg">
-      </picture>
-    </section>
-    <section class="row">
-      <h2>Featured Work</h2>
-    </section>
-    <article class="row projects">
-      <section class="col-md-4">
-        <picture>
-          <source srcset="img/project1_1x.jpg" media="(max-width: 600px)">
-          <source srcset="img/project1_2x.jpg" media="(min-width: 950px)">
-          <img class="image" src="img/project1_2x.jpg" alt="photo of modern statue">
-        </picture>
-        <h3>Project 1</h3>
-        <p><a href="#">https://github.com/thirdth/Project1/</a></p> <!--TODO add project1 github html -->
-      </section>
-      <section class="col-md-4">
-        <picture>
-          <source srcset="img/project2_1x.jpg" media="(max-width: 600px)">
-          <source srcset="img/project2_2x.jpg" media="(min-width: 950px)">
-          <img class="image" src="img/project2_2x.jpg" alt="photo of man with llama">
-        </picture>
-        <h3>Project 2</h3>
-        <p><a href="#">https://github.com/thirdth/Project2/</a></p> <!--TODO add project2 github html -->
-      </section>
-      <section class="col-md-4">
-        <picture>
-          <source srcset="img/project3_1x.jpg" media="(max-width: 600px)">
-          <source srcset="img/project3_3x.jpg" media="(min-width: 767px)">
-          <img class="image" src="img/project3_2x.jpg" alt="photo of people in a plaza">
-        </picture>
-        <h3>Project 3</h3>
-        <p><a href="#">https://github.com/thirdth/Project3/</a></p> <!--TODO add project3 github html -->
-      </section>
-    </article>
-    <footer>
-      <section class="row">
-        <section class="col-md-5">
-        </section>
-        <section class="col-md-2 border">
-          <p>&copy Zack Glaser 2017
-        </section>
-        <section class="col-md-5">
-        </section>
-      </section>
-    </footer>
-</body>
+      <!--start footer TODO: place footer in separate file for reuse-->
+      <footer class="row">
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-2 border">
+          <p>© Zack Glaser 2017
+        </div>
+        <div class="col-md-5">
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
