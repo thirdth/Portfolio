@@ -2,7 +2,7 @@
 <html>
   <head>
 
-    <meta name="description" content="Portfolio project for Zack Glaser"/>
+    <meta name="description" content="Portfolio project for Zack Glaser">
     <meta name="author" content="//zackglaser.com">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta charset="utf-8">
@@ -18,7 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--specialized css has to load after bootstrap's more general css-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
@@ -59,14 +59,16 @@
       </nav>
       <!--End reusable header TODO: place header in separate file for reuse-->
       <section class="row hero">
-        <picture>
-          <source srcset="img/guesthouse_600x225.jpg" media="(max-width:600px)">
-          <source srcset="img/guesthouse_1200x450.jpg" media="(min-width: 600px)">
-          <img class="jumbo" src="img/guesthouse_1200x450.jpg" alt="landscape image of cottage">
-        </picture>
-        <h2>Featured Work</h2>
+        <div class="col-md-12">
+          <picture>
+            <source srcset="img/guesthouse_600x225.jpg" media="(max-width:600px)">
+            <source srcset="img/guesthouse_1200x450.jpg" media="(min-width: 600px)">
+            <img class="jumbo" src="img/guesthouse_1200x450.jpg" alt="landscape image of cottage">
+          </picture>
+          <h2>Featured Work</h2>
+        </div>
       </section>
-      <div class="row projects">
+      <main class="row projects">
         <section class="col-md-4">
           <picture>
             <source srcset="img/project1_1x.jpg" media="(max-width: 600px)">
@@ -94,7 +96,7 @@
           <h3>Project 3</h3>
           <p><a href="#">https://github.com/thirdth/Project3/</a></p> <!--TODO: add project3 github html-->
         </section>
-      </div>
+      </main>
       <!--start footer TODO: place footer in separate file for reuse-->
       <footer class="row">
         <div class="col-md-5">
